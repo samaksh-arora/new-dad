@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New D.A.D</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0b0f; color: #fff; font-family: -apple-system, system-ui, sans-serif; }
+  #gate { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center; padding: 0 16px; }
+  button { font: inherit; font-size: 18px; padding: 14px 28px; border: 0; border-radius: 10px; background: #fff; color: #000; cursor: pointer; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+</style>
+</head>
+<body>
+<div id="gate">
+  <h1>New D.A.D</h1>
+  <p>Tap below to view.</p>
+  <button id="go">View D.A.D</button>
+</div>
+<script>
+  document.getElementById('go').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&playsinline=1';
+    f.allow = 'autoplay; encrypted-media; fullscreen';
+    f.allowFullscreen = true;
+    document.body.innerHTML = '';
+    document.body.appendChild(f);
+  });
+</script>
+</body>
+</html>
